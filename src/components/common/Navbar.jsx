@@ -30,8 +30,8 @@ const Navbar = () => {
               className="rounded-full border border-white/20"
             />
 
-            <h1 className="text-2xl font-bold text-white tracking-wide">
-              Fashion<span className="text-orange-500">Store</span>
+            <h1 className="text-3xl font-bold text-white tracking-wide">
+              Fashion<span className="text-blue-400 text-3xl font-bold">Store</span>
             </h1>
           </Link>
 
