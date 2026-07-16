@@ -49,8 +49,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-white">
-     
+    <section className="relative overflow-hidden bg-black text-white">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <motion.div
           animate={{
@@ -90,7 +89,7 @@ const Banner = () => {
           >
             <motion.span
               variants={itemVariants}
-              className="mb-6 inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600"
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-400"
             >
               <FaStar />
               New Season Collection
@@ -98,11 +97,11 @@ const Banner = () => {
 
             <motion.h1
               variants={itemVariants}
-              className="mb-6 text-5xl font-bold leading-tight text-gray-900 lg:text-6xl"
+              className="mb-6 text-5xl font-bold leading-tight text-white lg:text-6xl"
             >
               Wear What
               <br />
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Defines You
               </span>
             </motion.h1>
@@ -162,7 +161,7 @@ const Banner = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="overflow-hidden rounded-3xl shadow-2xl"
+                className="overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 shadow-2xl"
               >
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -206,7 +205,7 @@ const Banner = () => {
                 transition={{
                   delay: 0.8,
                 }}
-                className="absolute -bottom-6 -left-6 rounded-2xl bg-white px-5 py-4 shadow-xl"
+                className="absolute -bottom-6 -left-6 rounded-2xl border border-white/50 bg-white/80 px-5 py-4 shadow-xl backdrop-blur-md"
               >
                 <div className="flex items-center gap-3">
                   <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 font-bold text-white">

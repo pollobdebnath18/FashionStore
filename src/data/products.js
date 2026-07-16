@@ -1,10 +1,11 @@
 const products = [
   {
     id: 1,
-    name: "Classic Cotton Panjabi",
-    category: "Panjabi",
+    name: "Classic Cotton Shirt",
+    category: "shirt",
     price: 1490,
-    image: "https://images.unsplash.com/photo-1603252109303-2751441dd157?w=600",
+    image:
+      "https://images.unsplash.com/photo-1621072156002-e2fccdc0b176?auto=format&fit=crop&w=600&q=80",
     rating: 4.5,
     colors: ["White", "Navy"],
     sizes: ["M", "L", "XL"],
@@ -17,7 +18,8 @@ const products = [
     name: "Slim Fit Denim Jacket",
     category: "Jacket",
     price: 2590,
-    image: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=600",
+    image:
+      "https://images.unsplash.com/photo-1548883354-94bcfe321cbb?auto=format&fit=crop&w=600&q=80",
     rating: 4.8,
     colors: ["Blue", "Black"],
     sizes: ["M", "L", "XL"],
@@ -70,7 +72,7 @@ const products = [
     category: "Shirt",
     price: 1590,
     image:
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=800&q=80",
     rating: 4.5,
     colors: ["White", "Blue"],
     sizes: ["M", "L", "XL", "XXL"],
@@ -130,19 +132,7 @@ const products = [
     description:
       "Elegant floral dress crafted from lightweight fabric, perfect for summer outings.",
   },
-  {
-    id: 11,
-    name: "Leather Chelsea Boots",
-    category: "Shoes",
-    price: 3290,
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600",
-    rating: 4.9,
-    colors: ["Brown", "Black"],
-    sizes: ["40", "41", "42", "43"],
-    inStock: true,
-    description:
-      "Premium leather Chelsea boots combining durability with timeless sophistication.",
-  },
+ 
   {
     id: 12,
     name: "Minimalist Leather Backpack",
@@ -253,7 +243,8 @@ const products = [
     name: "Essential Crew Neck T-Shirt",
     category: "T-Shirt",
     price: 690,
-    image: "https://images.unsplash.com/photo-1583743814966-8936f37f4f7a?w=600",
+    image:
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80",
     rating: 4.6,
     colors: ["Navy", "Olive", "White"],
     sizes: ["S", "M", "L"],

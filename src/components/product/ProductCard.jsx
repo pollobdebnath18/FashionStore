@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { FaStar, FaShoppingBag } from "react-icons/fa";
 
 const ProductCard = ({ product }) => {
+    console.log(typeof product.id)
   return (
     <motion.div
       whileHover={{ y: -6 }}
