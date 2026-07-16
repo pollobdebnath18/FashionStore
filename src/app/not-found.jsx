@@ -6,7 +6,7 @@ import { FaExclamationTriangle, FaArrowLeft } from "react-icons/fa";
 
 const NotFoundPage = () => {
   return (
-    <section className="min-h-screen bg-white flex items-center justify-center px-6">
+    <section className="min-h-screen bg-black  flex items-center justify-center px-6">
       <div className="max-w-xl text-center">
         {/* Icon */}
         <motion.div
@@ -26,7 +26,7 @@ const NotFoundPage = () => {
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-7xl md:text-8xl font-extrabold text-gray-900"
+          className="text-7xl md:text-8xl font-extrabold text-gray-200"
         >
           404
         </motion.h1>
@@ -36,7 +36,7 @@ const NotFoundPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="mt-4 text-3xl font-bold text-gray-800"
+          className="mt-4 text-3xl font-bold text-white/70"
         >
           Oops! Page Not Found
         </motion.h2>
