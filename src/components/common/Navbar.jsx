@@ -55,11 +55,11 @@ const Navbar = () => {
               <ShoppingBag size={24} />
             </button>
 
-            <button className="border border-orange-500 text-orange-500 px-5 py-2 rounded-full hover:bg-orange-500 hover:text-white transition">
+            <button className="border border-blue-200 text-blue-400 px-5 py-2 rounded-full hover:bg-orange-500 hover:text-white transition">
               Login
             </button>
 
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-full transition">
+            <button className="bg-blue-400 hover:bg-orange-600 text-black px-5 py-2 rounded-full transition">
               Sign Up
             </button>
           </div>
@@ -91,11 +91,11 @@ const Navbar = () => {
             </ul>
 
             <div className="flex flex-col gap-3 mt-6">
-              <button className="border border-orange-500 text-orange-500 py-2 rounded-full">
+              <button className="border border-blue-500 text-black-500 py-2 rounded-full">
                 Login
               </button>
 
-              <button className="bg-orange-500 text-white py-2 rounded-full">
+              <button className="bg-blue-500 text-white py-2 rounded-full">
                 Sign Up
               </button>
             </div>
