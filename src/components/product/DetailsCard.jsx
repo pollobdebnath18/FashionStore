@@ -12,9 +12,33 @@ import {
   FaTruck,
   FaUndo,
   FaShieldAlt,
+  FaCheck,
+  FaMinus,
+  FaPlus,
 } from "react-icons/fa";
+import { useState } from "react";
+import { useCart } from "@/context/CartContext";
 
 const DetailsCard = ({ product }) => {
+  const { addToCart } = useCart();
+
+  const [selectedColor, setSelectedColor] = useState(
+    product.colors?.[0] ?? null,
+  );
+  const [selectedSize, setSelectedSize] = useState(product.sizes?.[0] ?? null);
+  const [quantity, setQuantity] = useState(1);
+  const [added, setAdded] = useState(false);
+
+  const handleAddToCart = () => {
+    addToCart(product, {
+      color: selectedColor,
+      size: selectedSize,
+      quantity,
+    });
+    setAdded(true);
+    setTimeout(() => setAdded(false), 1800);
+  };
+
   return (
     <div className="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 shadow-2xl">
       <div className="grid lg:grid-cols-2 gap-10">
@@ -108,17 +132,22 @@ const DetailsCard = ({ product }) => {
           {/* Colors */}
           <div className="mt-8">
             <h3 className="mb-3 text-lg font-semibold text-white">
-              Available Colors
+              Color: <span className="text-blue-400">{selectedColor}</span>
             </h3>
 
             <div className="flex flex-wrap gap-3">
               {product.colors.map((color) => (
-                <span
+                <button
                   key={color}
-                  className="rounded-full border border-zinc-700 bg-zinc-800 px-4 py-2 text-sm text-zinc-300"
+                  onClick={() => setSelectedColor(color)}
+                  className={`rounded-full border px-4 py-2 text-sm transition ${
+                    selectedColor === color
+                      ? "border-blue-500 bg-blue-600/20 text-blue-300"
+                      : "border-zinc-700 bg-zinc-800 text-zinc-300 hover:border-zinc-500"
+                  }`}
                 >
                   {color}
-                </span>
+                </button>
               ))}
             </div>
           </div>
@@ -126,18 +155,47 @@ const DetailsCard = ({ product }) => {
           {/* Sizes */}
           <div className="mt-8">
             <h3 className="mb-3 text-lg font-semibold text-white">
-              Available Sizes
+              Size: <span className="text-blue-400">{selectedSize}</span>
             </h3>
 
             <div className="flex flex-wrap gap-3">
               {product.sizes.map((size) => (
                 <button
                   key={size}
-                  className="flex h-12 w-12 items-center justify-center rounded-lg border border-zinc-700 bg-zinc-800 text-white transition hover:border-blue-500 hover:bg-blue-600"
+                  onClick={() => setSelectedSize(size)}
+                  className={`flex h-12 w-12 items-center justify-center rounded-lg border text-white transition ${
+                    selectedSize === size
+                      ? "border-blue-500 bg-blue-600"
+                      : "border-zinc-700 bg-zinc-800 hover:border-blue-500 hover:bg-blue-600"
+                  }`}
                 >
                   {size}
                 </button>
               ))}
+            </div>
+          </div>
+
+          {/* Quantity */}
+          <div className="mt-8">
+            <h3 className="mb-3 text-lg font-semibold text-white">Quantity</h3>
+            <div className="flex w-fit items-center gap-5 rounded-xl border border-zinc-700 bg-zinc-800 px-4 py-2.5">
+              <button
+                aria-label="Decrease quantity"
+                onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                className="text-zinc-400 transition hover:text-white"
+              >
+                <FaMinus className="h-3 w-3" />
+              </button>
+              <span className="w-5 text-center font-semibold text-white">
+                {quantity}
+              </span>
+              <button
+                aria-label="Increase quantity"
+                onClick={() => setQuantity((q) => q + 1)}
+                className="text-zinc-400 transition hover:text-white"
+              >
+                <FaPlus className="h-3 w-3" />
+              </button>
             </div>
           </div>
 
@@ -162,14 +220,17 @@ const DetailsCard = ({ product }) => {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.96 }}
               disabled={!product.inStock}
+              onClick={handleAddToCart}
               className={`flex flex-1 items-center justify-center gap-2 rounded-xl py-4 font-semibold transition ${
-                product.inStock
-                  ? "bg-blue-600 text-white hover:bg-blue-700"
-                  : "cursor-not-allowed bg-zinc-700 text-zinc-400"
+                !product.inStock
+                  ? "cursor-not-allowed bg-zinc-700 text-zinc-400"
+                  : added
+                    ? "bg-green-600 text-white"
+                    : "bg-blue-600 text-white hover:bg-blue-700"
               }`}
             >
-              <FaShoppingCart />
-              Add to Cart
+              {added ? <FaCheck /> : <FaShoppingCart />}
+              {added ? "Added to Cart" : "Add to Cart"}
             </motion.button>
 
             <motion.button
