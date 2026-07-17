@@ -73,7 +73,7 @@ const ContactPage = () => {
 
                 <div>
                   <h3 className="text-white font-semibold">Address</h3>
-                  <p className="text-gray-400">Habiganj, Sylhet, Bangladesh</p>
+                  <p className="text-gray-400">Sylhet, Bangladesh</p>
                 </div>
               </div>
 
