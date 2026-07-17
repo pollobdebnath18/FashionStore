@@ -9,6 +9,7 @@ import Img1 from "../../images/img1.jpg";
 // import Img2 from "../../images/img2.jpg";
 import Img3 from "../../images/img3.jpg";
 import Img4 from "../../images/img4.jpg";
+import Link from "next/link";
 
 const containerVariants = {
   hidden: {},
@@ -121,29 +122,10 @@ const Banner = () => {
               whileTap={{ scale: 0.95 }}
               className="group inline-flex items-center gap-3 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 px-7 py-4 font-semibold text-white shadow-lg"
             >
-              Explore More
+             <Link href="/products">Explore More</Link>
               <FaArrowRight className="transition group-hover:translate-x-1" />
             </motion.button>
 
-            {/* <motion.div
-              variants={itemVariants}
-              className="mt-10 flex justify-center gap-10 border-t border-gray-200 pt-8 md:justify-start"
-            >
-              <div>
-                <h2 className="text-2xl font-bold">500+</h2>
-                <p className="text-sm text-gray-500">Products</p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold">10K+</h2>
-                <p className="text-sm text-gray-500">Customers</p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold">4.8★</h2>
-                <p className="text-sm text-gray-500">Rating</p>
-              </div>
-            </motion.div> */}
           </motion.div>
 
           {/* Right */}

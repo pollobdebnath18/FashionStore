@@ -74,7 +74,7 @@ const CartItem = ({ item }) => {
       <button
         aria-label="Remove item"
         onClick={() => removeFromCart(item.id, item.color, item.size)}
-        className="justify-self-end text-gray-500 transition-colors hover:text-red-400"
+        className="justify-self-end text-red-500 transition-colors hover:text-red-800"
       >
         <FaTrash className="h-3.5 w-3.5" />
       </button>

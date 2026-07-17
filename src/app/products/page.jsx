@@ -14,9 +14,7 @@ const ProductsPage = () => {
   const [sort, setSort] = useState("featured");
   const [isLoading, setIsLoading] = useState(true);
 
-  // Simulates fetching product data. Since this app runs on local dummy
-  // data there's no real network call — replace this with your actual
-  // fetch/await logic later and drop the setTimeout.
+  
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 700);
     return () => clearTimeout(timer);
@@ -43,7 +41,6 @@ const ProductsPage = () => {
       );
     }
 
-    // avoid mutating the filtered/original array in place
     result = [...result];
 
     if (sort === "price-asc") result.sort((a, b) => a.price - b.price);

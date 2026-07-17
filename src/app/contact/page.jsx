@@ -24,10 +24,10 @@ const ContactPage = () => {
           </span>
 
           <h1 className="text-4xl md:text-5xl font-bold text-white mt-3">
-            We d Love to Hear From You
+            We &apos;d Love to Hear From You
           </h1>
 
-          <p className="text-gray-400 mt-5 leading-8">
+          <p className="text-gray-400 mt-5 leading-7">
             Have questions about our products or need assistance with your
             order? Our team is here to help you anytime.
           </p>

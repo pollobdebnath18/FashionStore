@@ -19,7 +19,7 @@ const Featured = () => {
             Featured Products
           </h2>
 
-          <p className="mt-5 text-gray-400 leading-8">
+          <p className="mt-5 text-gray-400 leading-7">
             Explore our handpicked collection of premium fashion essentials,
             designed to elevate your everyday style with comfort, quality, and
             timeless elegance.
@@ -27,7 +27,7 @@ const Featured = () => {
         </div>
 
         {/* Products */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
           {featuredProducts.map((product) => (
             <ProductCard
               key={product.id}
