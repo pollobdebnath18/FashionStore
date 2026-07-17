@@ -19,8 +19,7 @@ export function CartProvider({ children }) {
   const [items, setItems] = useState([]);
   const [isHydrated, setIsHydrated] = useState(false);
 
-  // Hydrate from localStorage after mount only, so SSR markup (always
-  // empty) matches the client's first render and we avoid a mismatch.
+ 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setItems(readStoredCart());
@@ -32,7 +31,6 @@ export function CartProvider({ children }) {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
   }, [items, isHydrated]);
 
-  // product: the product object. options: { color, size, quantity }
   const addToCart = (product, options = {}) => {
     const color = options.color ?? product.colors?.[0] ?? null;
     const size = options.size ?? product.sizes?.[0] ?? null;

@@ -9,6 +9,7 @@ const ProductDetailsPage = async ({ params }) => {
 
   if (!product) {
     notFound();
+    
   }
 
   return (

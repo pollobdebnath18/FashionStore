@@ -64,7 +64,7 @@ const DetailsCard = ({ product }) => {
               className="h-[300px] md:h-[500px] w-full object-cover transition duration-500 hover:scale-105"
             />
           </div>
-          {/* Features */}
+         
           <div className="mt-10 grid gap-4 border-t border-zinc-800 pt-8 sm:grid-cols-3">
             <div className="rounded-xl bg-zinc-800 p-4">
               <FaTruck className="mb-3 text-2xl text-blue-400" />
@@ -86,14 +86,13 @@ const DetailsCard = ({ product }) => {
           </div>
         </motion.div>
 
-        {/* Right Side */}
         <motion.div
           initial={{ opacity: 0, x: 80 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
           className="flex flex-col justify-center p-6 lg:p-10"
         >
-          {/* Back */}
+        
           <Link
             href="/products"
             className="mb-6 inline-flex w-fit items-center gap-2 text-blue-400 transition hover:text-blue-500"
@@ -121,15 +120,15 @@ const DetailsCard = ({ product }) => {
             <span className="text-zinc-400">(124 Reviews)</span>
           </div>
 
-          {/* Price */}
+          
           <h2 className="mt-6 text-4xl font-bold text-blue-500">
             ৳ {product.price}
           </h2>
 
-          {/* Description */}
+          
           <p className="mt-6 leading-8 text-zinc-400">{product.description}</p>
 
-          {/* Colors */}
+         
           <div className="mt-8">
             <h3 className="mb-3 text-lg font-semibold text-white">
               Color: <span className="text-blue-400">{selectedColor}</span>
@@ -152,7 +151,7 @@ const DetailsCard = ({ product }) => {
             </div>
           </div>
 
-          {/* Sizes */}
+         
           <div className="mt-8">
             <h3 className="mb-3 text-lg font-semibold text-white">
               Size: <span className="text-blue-400">{selectedSize}</span>
@@ -199,7 +198,6 @@ const DetailsCard = ({ product }) => {
             </div>
           </div>
 
-          {/* Stock */}
           <div className="mt-8 flex items-center gap-3">
             {product.inStock ? (
               <>
@@ -214,7 +212,6 @@ const DetailsCard = ({ product }) => {
             )}
           </div>
 
-          {/* Buttons */}
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <motion.button
               whileHover={{ scale: 1.03 }}

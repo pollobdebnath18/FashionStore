@@ -8,9 +8,6 @@ import { useCart } from "@/context/CartContext";
 import EmptyCart from "@/components/cart/EmptyCart";
 import CartItem from "@/components/cart/CartItem";
 import CartSummary from "@/components/cart/CartSummery";
-// import CartItem from "@/components/cart/CartItem";
-// import CartSummary from "@/components/cart/CartSummary";
-// import EmptyCart from "@/components/cart/EmptyCart";
 
 const CartPage = () => {
   const { items, isHydrated } = useCart();
@@ -28,7 +25,6 @@ const CartPage = () => {
     );
   }
 
-  // Order confirmation state
   if (orderPlaced) {
     return (
       <div className="flex min-h-[70vh] items-center justify-center bg-black px-4">
@@ -72,7 +68,6 @@ const CartPage = () => {
   return (
     <div className="min-h-screen bg-black">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
-        {/* Header */}
         <div className="mb-10 text-center">
           <h1 className="text-3xl font-bold text-white md:text-4xl">
             Shopping Cart
@@ -86,10 +81,8 @@ const CartPage = () => {
           <EmptyCart />
         ) : (
           <div className="grid gap-10 lg:grid-cols-3">
-            {/* Items table */}
             <div className="lg:col-span-2">
               <div className="rounded-2xl border border-white/10 bg-white/5 px-5">
-                {/* Table header - desktop only */}
                 <div className="hidden grid-cols-[80px_2fr_1fr_1.2fr_1fr_auto] gap-4 border-b border-white/10 py-4 text-xs font-semibold uppercase tracking-wide text-gray-500 md:grid">
                   <span>Image</span>
                   <span>Name</span>
@@ -112,7 +105,6 @@ const CartPage = () => {
               </div>
             </div>
 
-            {/* Summary */}
             <div className="lg:col-span-1">
               <div className="sticky top-24">
                 <CartSummary onCheckout={() => setOrderPlaced(true)} />
